@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   carousels.forEach((carousel) => {
     // 子要素(.carousel-item)の個数
     const children = carousel.querySelectorAll(".carousel-item").length;
-    carousel.setAttribute("style", `--i: ${children}`);
+    if (children !== 1) {
+      carousel.setAttribute("style", `--i: ${children}`);
+    }
   });
 });

@@ -30,7 +30,7 @@ body {
     .contentBody {
       section {
         &:not(:last-child) {
-          margin-bottom: var(--gutter);
+          margin-bottom: calc(var(--gutter) * 1.5);
         }
 
         > *:not(:last-child) {
@@ -84,6 +84,38 @@ body {
       }
     }
   }
+}
+
+/* icon */
+.icn {
+  display: block;
+  height: 2.4rem;
+  width: 2.4rem;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    color: var(--c-primary);
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.icn-arrow-left::before {
+  content: "\e5e0";
 }
 
 /* text style */
