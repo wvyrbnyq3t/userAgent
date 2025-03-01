@@ -30,9 +30,47 @@
       <main>
         <div class="contentBody">
           <section>
-            <h2 class="secTitle">ユーザーエージェント</h2>
-            <button type="button" class="btn-secondary w-100" id="btnGetUserAgent">取得する</button>
+            <h2 class="secTitle">謎を探す</h2>
+            <button type="button" class="btn-secondary w-100">
+              二次元コードをスキャン
+            </button>
           </section>
+          <section>
+            <h2 class="secTitle">集めたワード</h2>
+            <p>集めたワードはまだありません。構内を探してワードを集めよう！</p>
+          </section>
+          <section>
+            <h2 class="secTitle">ピックアップ</h2>
+            <div class="carousel carousel-banner">
+              <div class="carousel-item">
+                <div class="imgbox">
+                  <img
+                    src="https://media2.tokyodisneyresort.jp/home/topics/event/vanellope/main.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="txtBox">
+                  <p class="title">
+                    ディズニー・パルパルーザ第 3 弾『ヴァネロペのスィーツ・ポップ・ワールド』
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="imgbox">
+                  <img
+                    src="https://media2.tokyodisneyresort.jp/home/tdr/pickup/202411/spring_disney.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="txtBox">
+                  <p class="title">
+                    春ディズニー
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section></section>
         </div>
       </main>
     </div>
@@ -42,5 +80,18 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/script.js"></script>
+    <script>
+      // 端末判別
+      document.addEventListener("DOMContentLoaded", () => {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        const isMobile = /iphone|android/.test(userAgent);
+
+        if (!isMobile) {
+          window.location.href = "unsupported.html";
+        }
+      });
+
+      // ログイン情報
+    </script>
   </body>
 </html>

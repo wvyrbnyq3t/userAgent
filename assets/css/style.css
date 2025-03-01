@@ -1,6 +1,7 @@
 html {
   font-size: 10px;
   touch-action: pan-x pan-y;
+  user-select: none;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
 }
 
 .pageContent {
+  box-shadow: 0 0 0.1rem #333;
   height: 100%;
   width: min(100%, var(--w-pc));
   margin: 0 auto;
@@ -44,17 +46,81 @@ body {
   }
 }
 
-
 /* button style */
 .btn-secondary {
-  border: .1rem solid var(--c-primary);
-  border-radius: .4rem;
+  border: 0.1rem solid var(--c-primary);
+  border-radius: 0.4rem;
   color: var(--c-primary);
   display: inline-block;
   font-weight: 700;
   padding: 1.2rem 3.6rem;
   text-align: center;
   width: fit-content;
+}
+
+/* carousel */
+.carousel-banner {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(var(--i), calc(100% - 3.2rem));
+  overflow: scroll hidden;
+  padding: 0.05rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    box-shadow: 0 0 0.1rem #333;
+    scroll-snap-align: center;
+
+    .txtBox {
+      padding: 0.8rem;
+
+      .title {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+/* text style */
+.fs-huge {
+  font-size: 3.2rem;
+}
+.fs-xlarge {
+  font-size: 2.4rem;
+}
+.fs-large {
+  font-size: 2rem;
+}
+.fs-medium {
+  font-size: 1.6rem;
+}
+.fs-small {
+  font-size: 1.2rem;
+}
+.fs-xsmall {
+  font-size: 1rem;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+.fw-light {
+  font-weight: 300;
+}
+
+.t-left {
+  text-align: left;
+}
+.t-center {
+  text-align: center;
+}
+.t-right {
+  text-align: right;
 }
 
 /* width */
