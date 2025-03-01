@@ -9,3 +9,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// フォームチェック
+const formInputs = document.querySelectorAll(".form-input");
+formInputs.forEach((element) => {
+  element.addEventListener("change", (e) => {
+    const target = e.target;
+    const value = target.value;
+    const field = target.getAttribute("data-formfield");
+    const err = document.querySelector(`.form-err[data-formfield="${field}"]`);
+    const btn = document.querySelector(`.btn-submit[data-formfield="${field}"]`);
+
+    if (value === "") {
+      err.classList.add("is-show");
+      btn.setAttribute("aria-disabled", true);
+    } else {
+      err.classList.remove("is-show");
+      btn.setAttribute("aria-disabled", false);
+    }
+  })
+})

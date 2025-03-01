@@ -28,6 +28,12 @@ body {
 
   main {
     .contentBody {
+      .pageTitle {
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+      }
+
       section {
         &:not(:last-child) {
           margin-bottom: calc(var(--gutter) * 1.5);
@@ -47,6 +53,21 @@ body {
 }
 
 /* button style */
+.btn-primary {
+  background-color: var(--c-primary);
+  border-radius: .4rem;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  padding: 1.2rem 3.6rem;
+  text-align: center;
+  width: fit-content;
+
+  &[aria-disabled="true"] {
+    background-color: var(--c-gray);
+    cursor: not-allowed;
+  }
+}
 .btn-secondary {
   border: 0.1rem solid var(--c-primary);
   border-radius: 0.4rem;
@@ -86,6 +107,40 @@ body {
   }
 }
 
+/* column */
+.column-wrap {
+  display: grid;
+  gap: var(--gutter);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* form style */
+.form-input {
+  border-radius: 0.4rem;
+  display: block;
+  outline: .1rem solid var(--c-gray);
+  padding: 0.8rem;
+  width: 100%;
+
+  &:focus {
+    outline-color: var(--c-primary);
+  }
+}
+.form-err {
+  color: var(--c-red);
+  display: none;
+
+  &.is-show {
+    display: block;
+  }
+}
+
+/* divider */
+.divider-bottom {
+  border-bottom: .1rem solid var(--c-gray);
+  padding-bottom: var(--gutter);
+}
+
 /* icon */
 .icn {
   display: block;
@@ -116,6 +171,15 @@ body {
 }
 .icn-arrow-left::before {
   content: "\e5e0";
+}
+
+/* image */
+.img-fullVis {
+  img {
+    display: block;
+    margin-left: calc(-1 * var(--gutter));
+    width: calc(100% + 2 * var(--gutter));
+  }
 }
 
 /* text style */
