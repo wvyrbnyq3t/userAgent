@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // フォームチェック
 const formInputs = document.querySelectorAll(".form-input");
 formInputs.forEach((element) => {
-  element.addEventListener("change", (e) => {
+  element.addEventListener("input", (e) => {
     const target = e.target;
     const value = target.value;
     const field = target.getAttribute("data-formfield");
