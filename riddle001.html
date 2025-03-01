@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/lib/modal.css">
+    <link rel="stylesheet" href="./assets/css/lib/modal.css" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"
@@ -31,12 +31,18 @@
       <div class="overlay"></div>
       <div class="center">
         <div class="modalContent" data-modal="retirement">
-          <div class="divider-bottom">
+          <div class="container divider-bottom">
             <h2 class="fs-large fw-bold t-center">本当に諦めますか？</h2>
-            <p>謎解きを一時中断すると現在の進行状況がリセットされてしまいます。</p>
+            <p>
+              謎解きを一時中断すると現在の進行状況がリセットされてしまいます。
+            </p>
           </div>
-          <button type="button" class="btn-secondary w-100 btn-closeModal">戻る</button>
-          <a href="index.html" class="btn-primary w-100">一時中断する</a>
+          <div class="container">
+            <button type="button" class="btn-secondary w-100 btn-closeModal">
+              戻る
+            </button>
+            <a href="index.html" class="btn-primary w-100">一時中断する</a>
+          </div>
         </div>
       </div>
     </div>
@@ -46,19 +52,43 @@
           <section>
             <h1 class="pageTitle">第 1 問</h1>
             <div class="img-fullVis">
-              <img src="./assets/images/day2/r001.jpg" alt="">
+              <img src="./assets/images/day2/r001.jpg" alt="" />
             </div>
           </section>
           <section>
             <h2 class="secTitle">答えを入力</h2>
-            <input type="text" name="answer" id="answer" class="form-input" placeholder="答えを入力" data-formfield="answer">
-            <p class="form-err" data-formfield="answer">答えを入力してください</p>
-            <button type="button" class="btn-primary w-100 btn-submit" aria-disabled="true" data-formfield="answer">回答を送信</button>
+            <input
+              type="text"
+              name="answer"
+              id="answer"
+              class="form-input"
+              placeholder="答えを入力"
+              data-formfield="answer"
+            />
+            <p class="form-err" data-formfield="answer">
+              答えを入力してください
+            </p>
+            <button
+              type="button"
+              class="btn-primary w-100 btn-submit"
+              aria-disabled="true"
+              data-formfield="answer"
+            >
+              回答を送信
+            </button>
           </section>
           <section>
             <div class="column-wrap">
-              <button type="button" class="btn-secondary w-100 btn-openModal" data-modal="retirement">一時中断する</button>
-              <button type="button" class="btn-secondary w-100">ヒントを表示</button>
+              <button
+                type="button"
+                class="btn-secondary w-100 btn-openModal"
+                data-modal="retirement"
+              >
+                一時中断する
+              </button>
+              <button type="button" class="btn-secondary w-100">
+                ヒントを表示
+              </button>
             </div>
           </section>
         </div>

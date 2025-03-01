@@ -34,8 +34,6 @@
     .modalContent {
       background-color: #fff;
       border-radius: 0.4rem;
-      display: grid;
-      gap: 1.6rem;
       height: fit-content;
       width: min(calc(100% - 3.2rem), calc(var(--w-pc) - 3.2rem));
       max-height: 90%;
@@ -53,6 +51,16 @@
       }
       &.is-show {
         visibility: visible;
+      }
+      > * {
+        &:not(:last-child) {
+          margin-bottom: var(--gutter);
+        }
+      }
+      .container {
+        > *:not(:last-child) {
+          margin-bottom: calc(var(--gutter) / 2);
+        }
       }
     }
   }
